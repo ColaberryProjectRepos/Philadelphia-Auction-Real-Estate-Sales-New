@@ -1,0 +1,7 @@
+
+Creating Calendar Table
+12
+<p><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1427/12/1.jpg" style="width: 50%;"></p><p><br></p><p>Steps:  <br>  <br> <br>1.     Open Power BI Desktop and navigate to the 'Modeling' tab. <br>2.     Click on the 'New Table' button to create a new table. <br>3.     In the DAX formula bar, paste the following formula: <br>Calendar = ADDCOLUMNS(CALENDAR (Date(Year(Min(Properties_philly_Kraggle_v2[Sale Date])), <br>Month(Min(Properties_philly_Kraggle_v2[Sale Date])), <br>DAY(Min(Properties_philly_Kraggle_v2[Sale Date]))), <br>Date(Year(Max(Properties_philly_Kraggle_v2[Sale Date])), <br>Month(Max(Properties_philly_Kraggle_v2[Sale Date])), <br>DAY(Max(Properties_philly_Kraggle_v2[Sale Date])))) , <br>"Month number", FORMAT ([Date], "MM"), <br>"Month Year", FORMAT ([Date], "MMMYYYY"), <br>"Month", FORMAT ([Date], "mmmm"), <br>"Week Number", "Week-"&amp; WEEKNUM([Date]), <br>"Week", WEEKNUM ([Date]), <br>"Day Of Month", Month([DATE]) &amp;"-"&amp; FORMAT ( [Date], "dd" ), <br>"Year Quarter", FORMAT ([Date], "YYYY") &amp; "/Q" &amp; FORMAT ([Date], "Q"), <br>"Year", FORMAT ([Date], "YYYY") <br>) <br>4.     Press the checkmark icon or hit Enter to validate the formula. And save your Power BI project.</p><p><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1427/12/2.gif" style="width: 50%;"><br></p>
+
+<p><a href="https://www.youtube.com/watch?v=oN6mOmEruOQ" target="_blank">Calendar Table</a></p><p><br></p><p><br></p>
+
